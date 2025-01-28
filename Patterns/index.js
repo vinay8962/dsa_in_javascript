@@ -13,8 +13,16 @@
 
 // printSquarePattern(5); // Example usage
 
-// Pramid Pattern
+// Triangle Pattern
 
-function printPramidPattern(n) {
-  for (let i = 0; i < n; i++) {}
+function printTrianglePattern(n) {
+  for (let i = 0; i < n; i++) {
+    let row = " ";
+    for (let j = 0; j <= i; j++) {
+      row += "*";
+    }
+    console.log(row);
+  }
 }
+
+printTrianglePattern(5); // Example usage
