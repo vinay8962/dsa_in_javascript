@@ -73,20 +73,41 @@
 
 // Print Star Pyramid Pattern
 
-function printPyramid(n) {
+// function printPyramid(n) {
+//   for (let row = 1; row <= n; row++) {
+//     let str = " ";
+//     for (let col = 1; col <= n; col++) {
+//       if (row + col <= n) {
+//         str = str + " ";
+//       } else str = str + "*";
+//     }
+//     for (let col = 1; col <= n; col++) {
+//       if (row <= col) {
+//         str = str + " ";
+//       } else str = str + "*";
+//     }
+//     console.log(str);
+//   }
+// }
+// printPyramid(5);
+
+//  Print Star Reverse Pyramid Pattern
+
+function printReversePyramid(n) {
   for (let row = 1; row <= n; row++) {
-    let str = " ";
-    for (let col = 1; col <= n; col++) {
-      if (row + col <= n) {
-        str = str + " ";
-      } else str = str + "*";
+    let value = "";
+
+    for (let col = 1; col <= 2 * n - 1; col++) {
+      // Check if the position should have a star or a space
+      if (col >= row && col <= 2 * n - row) {
+        value += "*";
+      } else {
+        value += " ";
+      }
     }
-    for (let col = 1; col <= n; col++) {
-      if (row <= col) {
-        str = str + " ";
-      } else str = str + "*";
-    }
-    console.log(str);
+
+    console.log(value);
   }
 }
-printPyramid(5);
+
+printReversePyramid(5);
