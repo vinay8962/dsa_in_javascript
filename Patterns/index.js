@@ -93,21 +93,93 @@
 
 //  Print Star Reverse Pyramid Pattern
 
-function printReversePyramid(n) {
+// function printReversePyramid(n) {
+//   for (let row = n - 1; row >= 0; row--) {
+//     let value = "";
+//     for (let col = 0; col <= n; col++) {
+//       if (row + col <= n) {
+//         value = value + " ";
+//       } else {
+//         value = value + "*";
+//       }
+//     }
+//     for (let col = 0; col <= n; col++) {
+//       if (row >= col) {
+//         value = value + "*";
+//       } else {
+//         value = value + " ";
+//       }
+//     }
+//     console.log(value);
+//   }
+// }
+
+// printReversePyramid(5);
+
+// print star diamond pattern
+
+// function printDiamond(n) {
+//   for (let row = 0; row < n; row++) {
+//     let value = "";
+//     for (let col = 0; col <= n; col++) {
+//       if (row + col <= n) {
+//         value = value + " ";
+//       } else {
+//         value = value + "*";
+//       }
+//     }
+//     for (let col = 0; col <= n; col++) {
+//       if (row >= col) {
+//         value = value + "*";
+//       } else {
+//         value = value + " ";
+//       }
+//     }
+//     console.log(value);
+//   }
+//   for (let row = n - 1; row >= 0; row--) {
+//     let value = "";
+//     for (let col = 0; col <= n; col++) {
+//       if (row + col <= n) {
+//         value = value + " ";
+//       } else {
+//         value = value + "*";
+//       }
+//     }
+//     for (let col = 0; col <= n; col++) {
+//       if (row >= col) {
+//         value = value + "*";
+//       } else {
+//         value = value + " ";
+//       }
+//     }
+//     console.log(value);
+//   }
+// }
+
+// printDiamond(5);
+
+// Print Half star diamond pattern
+
+function printHalfDiamond(n) {
   for (let row = 1; row <= n; row++) {
     let value = "";
-
-    for (let col = 1; col <= 2 * n - 1; col++) {
-      // Check if the position should have a star or a space
-      if (col >= row && col <= 2 * n - row) {
-        value += "*";
-      } else {
-        value += " ";
-      }
+    for (let col = 1; col <= n; col++) {
+      if (row <= col - 1) {
+        value = value + " ";
+      } else value = value + "*";
     }
-
+    console.log(value);
+  }
+  for (let row = 1; row <= n - 1; row++) {
+    let value = "";
+    for (let col = n; col > 0; col--) {
+      if (row < col) {
+        value = value + "*";
+      } else value = value + " ";
+    }
     console.log(value);
   }
 }
 
-printReversePyramid(5);
+printHalfDiamond(5);
