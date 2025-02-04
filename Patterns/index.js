@@ -238,13 +238,127 @@
 
 //  Increasing Letter Triangle Pattern
 
-function printLetterTriangle(n) {
-  for (let row = 0; row < n; row++) {
+// function printLetterTriangle(n) {
+//   for (let row = 0; row < n; row++) {
+//     let value = "";
+//     for (let col = 0; col <= row; col++) {
+//       value = value + String.fromCharCode(65 + col);
+//     }
+//     console.log(value);
+//   }
+// }
+// printLetterTriangle(5);
+
+// Pattern-15: Reverse Letter Triangle Pattern\
+
+// function printReverseTriangle(n) {
+//   for (let row = 0; row < n; row++) {
+//     let value = "";
+//     for (let col = 0; col < n; col++) {
+//       if (col < n - row) {
+//         value = value + String.fromCharCode(65 + col);
+//       } else value = value + " ";
+//     }
+//     console.log(value);
+//   }
+// }
+// printReverseTriangle(5);
+
+// Pattern - 16: Alpha-Ramp Pattern
+
+// function printAlphaRamp(n) {
+//   for (let row = 0; row < n; row++) {
+//     let value = "";
+//     for (let col = 0; col < n; col++) {
+//       if (col < row + 1) {
+//         value = value + String.fromCharCode(65 + row);
+//       } else value = value + " ";
+//     }
+//     console.log(value);
+//   }
+// }
+// printAlphaRamp(5);
+
+//  Symmetric-Void Pattern
+
+// function printSymmetricVoid(n) {
+//   for (let row = 0; row < n; row++) {
+//     let value = "";
+//     for (let col = 0; col < n; col++) {
+//       if (col < n - row) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     for (let col = 0; col < n; col++) {
+//       if (row >= col + 1) {
+//         value = value + " ";
+//       } else value = value + "*";
+//     }
+//     console.log(value);
+//   }
+//   for (let row = 1; row <= n; row++) {
+//     let value = "";
+//     for (let col = 1; col <= n; col++) {
+//       if (col <= row) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     for (let col = 1; col <= n; col++) {
+//       if (row + col > n) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     console.log(value);
+//   }
+// }
+// printSymmetricVoid(6);
+
+// Symmetric-Butterfly Pattern
+
+// function printSymmetricButterfly(n) {
+//   for (let row = 1; row <= n; row++) {
+//     let value = "";
+//     for (let col = 1; col <= n; col++) {
+//       if (row >= col) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     for (let col = 1; col <= n; col++) {
+//       if (row + col > n) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     console.log(value);
+//   }
+//   for (let row = 1; row <= n; row++) {
+//     let value = "";
+//     for (let col = 1; col <= n; col++) {
+//       if (row + col > n + 1) {
+//         value = value + " ";
+//       } else value = value + "*";
+//     }
+//     for (let col = 1; col <= n; col++) {
+//       if (row <= col) {
+//         value = value + "*";
+//       } else value = value + " ";
+//     }
+//     console.log(value);
+//   }
+// }
+
+// printSymmetricButterfly(3);
+
+// Hollow Rectangle Pattern
+
+function printHollowRectangle(n) {
+  for (let row = 1; row <= n; row++) {
     let value = "";
-    for (let col = 0; col <= row; col++) {
-      value = value + String.fromCharCode(65 + col);
+    for (let col = 1; col <= n; col++) {
+      if (row === 1 || row === n || col === 1 || col === n) {
+        value += "*";
+      } else value += " ";
     }
     console.log(value);
   }
 }
-printLetterTriangle(5);
+printHollowRectangle(5);
